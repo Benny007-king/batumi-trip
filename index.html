@@ -86,7 +86,6 @@
             height: 100%;
             object-fit: cover;
             opacity: 0;
-            transition: opacity 1s ease-in-out; /* Fallback */
         }
         /* Using keyframes for continuous seamless loop */
         .slideshow-img:nth-child(1) {
@@ -110,21 +109,21 @@
 <body class="min-h-screen">
 
     <!-- Header / Hero Section -->
-    <div class="hero-pattern relative h-[500px] w-full shadow-2xl mb-12 flex items-center justify-center border-b-4 border-blue-500">
+    <div class="hero-pattern relative h-[400px] md:h-[500px] w-full shadow-2xl mb-8 md:mb-12 flex items-center justify-center border-b-4 border-blue-500">
         <div class="relative z-10 text-center text-white px-4 max-w-4xl">
-            <div class="inline-block bg-blue-600/90 backdrop-blur-md px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-4 shadow-lg border border-blue-400">GLOBUS TRAVEL EXPERTS</div>
-            <h1 class="text-5xl md:text-7xl font-black mb-4 drop-shadow-2xl">באטומי 2026</h1>
-            <p class="text-2xl md:text-3xl font-light opacity-90 mb-8">5-9 ביולי | ראשון עד חמישי | חופשה משפחתית יוקרתית</p>
+            <div class="inline-block bg-blue-600/90 backdrop-blur-md px-3 py-1 md:px-4 rounded-full text-xs md:text-sm font-bold tracking-widest uppercase mb-4 shadow-lg border border-blue-400">GLOBUS TRAVEL EXPERTS</div>
+            <h1 class="text-4xl md:text-7xl font-black mb-4 drop-shadow-2xl">באטומי 2026</h1>
+            <p class="text-xl md:text-3xl font-light opacity-90 mb-8">5-9 ביולי | ראשון עד חמישי</p>
             
-            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-                <div class="bg-black/40 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full flex items-center gap-2 hover:bg-black/60 transition">
-                    <i class="fas fa-hotel text-yellow-400"></i> King Solomon Hotel
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-base">
+                <div class="bg-black/40 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-black/60 transition">
+                    <i class="fas fa-hotel text-yellow-400"></i> King Solomon
                 </div>
-                <div class="bg-black/40 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full flex items-center gap-2 hover:bg-black/60 transition">
+                <div class="bg-black/40 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-black/60 transition">
                     <i class="fas fa-utensils text-green-400"></i> כשר למהדרין
                 </div>
-                <div class="bg-black/40 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full flex items-center gap-2 hover:bg-black/60 transition">
-                    <i class="fas fa-users text-purple-400"></i> 8 נוסעים (מגיל שנה עד 70+)
+                <div class="bg-black/40 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-black/60 transition">
+                    <i class="fas fa-users text-purple-400"></i> 8 נוסעים
                 </div>
             </div>
         </div>
@@ -133,22 +132,21 @@
     <div class="max-w-6xl mx-auto px-4 pb-20 relative z-10">
         
         <!-- Pre-Trip Checklist -->
-        <div class="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 mb-12 border-t-8 border-yellow-400 relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-4 opacity-5 text-9xl text-yellow-500 -mt-8 -mr-8 transform rotate-12">
+        <div class="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-6 md:p-8 mb-12 border-t-8 border-yellow-400 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5 text-8xl md:text-9xl text-yellow-500 -mt-8 -mr-8 transform rotate-12">
                 <i class="fas fa-plane"></i>
             </div>
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-800 border-b pb-4">
-                <span class="bg-yellow-100 text-yellow-600 p-3 rounded-xl ml-3"><i class="fas fa-clipboard-check"></i></span>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center text-gray-800 border-b pb-4">
+                <span class="bg-yellow-100 text-yellow-600 p-2 md:p-3 rounded-xl ml-3"><i class="fas fa-clipboard-check"></i></span>
                 הכנות אחרונות לטיסה (יולי 2026)
             </h2>
             <div class="grid md:grid-cols-2 gap-6 relative z-10">
                 <label class="checkbox-wrapper flex items-start cursor-pointer p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500">
+                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500 flex-shrink-0">
                     <div class="mr-4 w-full">
-                        <div class="flex items-center justify-between mb-2">
+                        <div class="flex flex-wrap items-center justify-between mb-2 gap-2">
                             <span class="font-bold text-lg text-gray-800">טיסות ישראייר (Israir)</span>
-                            <!-- Updated Israir Logo -->
-                            <img src="https://storage.googleapis.com/prod-wgclients/isra2023/gallery/brand.png" alt="Israir Logo" class="h-8 object-contain bg-blue-900/10 rounded px-1">
+                            <img src="https://storage.googleapis.com/prod-wgclients/isra2023/gallery/brand.png" alt="Israir Logo" class="h-8 max-w-[120px] object-contain bg-blue-900/10 rounded px-1">
                         </div>
                         <div class="text-sm text-gray-600 bg-blue-50 p-2 rounded">
                             <div class="flex justify-between border-b border-blue-100 pb-1 mb-1">
@@ -163,21 +161,21 @@
                     </div>
                 </label>
                 <label class="checkbox-wrapper flex items-start cursor-pointer p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500">
+                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500 flex-shrink-0">
                     <div class="mr-4">
                         <span class="font-bold text-lg block text-gray-800">מוניות (Bolt / Yandex)</span>
                         <span class="text-sm text-gray-500">חובה לשתי מוניות במקביל. להזין אשראי מראש.</span>
                     </div>
                 </label>
                 <label class="checkbox-wrapper flex items-start cursor-pointer p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500">
+                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500 flex-shrink-0">
                     <div class="mr-4">
                         <span class="font-bold text-lg block text-gray-800">ביטוח בריאות ותאונות</span>
                         <span class="text-sm text-gray-500">לוודא שיש ביטוח בריאות ותאונות מקיף בהתאם לחוק הגיאורגי החדש</span>
                     </div>
                 </label>
                 <label class="checkbox-wrapper flex items-start cursor-pointer p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500">
+                    <input type="checkbox" class="mt-1 h-6 w-6 text-blue-600 rounded-md border-gray-300 focus:ring-blue-500 flex-shrink-0">
                     <div class="mr-4">
                         <span class="font-bold text-lg block text-gray-800">לוגיסטיקה קטנטנים</span>
                         <span class="text-sm text-gray-500">מנשא גב לטיולים (בנוסף לעגלה), תמ"ל, חיתולים לימים הראשונים.</span>
@@ -192,23 +190,23 @@
 
             <!-- Day 1 -->
             <div class="card-hover bg-white/95 backdrop-blur rounded-2xl shadow-xl overflow-hidden relative z-10 border border-gray-100">
-                <div class="absolute top-0 right-0 bg-blue-600 text-white py-2 px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-lg">יום 1 | הגעה</div>
+                <div class="absolute top-0 right-0 bg-blue-600 text-white py-1 px-4 md:py-2 md:px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-sm md:text-lg">יום 1 | הגעה</div>
                 <div class="flex flex-col md:flex-row">
                     <!-- Image Section -->
                     <div class="md:w-2/5 relative overflow-hidden group">
                         <img src="https://m.daka90.co.il/images/www.alp.co.il/hotelImage/39176.jpg" alt="Batumi Hotel View" class="card-image w-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div class="text-white">
-                                <h3 class="text-2xl font-bold">נחיתה והטיילת</h3>
+                                <h3 class="text-xl md:text-2xl font-bold">נחיתה והטיילת</h3>
                                 <p class="text-sm opacity-90"><i class="fas fa-wheelchair mr-1"></i> נגיש לחלוטין</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Content Section -->
-                    <div class="md:w-3/5 p-8 flex flex-col justify-between">
+                    <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-3 mb-4 mt-8 md:mt-0">
+                            <div class="flex items-center gap-3 mb-4 mt-2 md:mt-0">
                                 <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold">יום ראשון, 5 ביולי</span>
                                 <span class="text-gray-400 text-sm">|</span>
                                 <span class="text-gray-600 text-sm font-medium">התאקלמות וערב רגוע</span>
@@ -240,8 +238,8 @@
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-blue-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">19:30 ארוחת ערב וטיילת</strong>
-                                    <span class="text-sm text-gray-600">ארוחה כשרה במלון ויציאה למזרקות הרוקדות (21:00).</span>
+                                    <strong class="block text-gray-800">19:30 ארוחת ערב חגיגית</strong>
+                                    <span class="text-sm text-gray-600">במסעדת **King Solomon** (כשר למהדרין) שבמלון.</span>
                                 </li>
                             </ul>
                         </div>
@@ -262,53 +260,54 @@
 
             <!-- Day 2 -->
             <div class="card-hover bg-white/95 backdrop-blur rounded-2xl shadow-xl overflow-hidden relative z-10 border border-gray-100">
-                <div class="absolute top-0 right-0 bg-green-600 text-white py-2 px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-lg">יום 2 | תצפיות</div>
+                <div class="absolute top-0 right-0 bg-green-600 text-white py-1 px-4 md:py-2 md:px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-sm md:text-lg">יום 2 | תצפיות</div>
                 <div class="flex flex-col md:flex-row">
                     <!-- Image Section -->
                     <div class="md:w-2/5 relative overflow-hidden group">
                         <img src="https://argo-batumi.ge//files/About-us/3.jpg" alt="Batumi Cable Car View" class="card-image w-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div class="text-white">
-                                <h3 class="text-2xl font-bold">רכבל ארגו וכיכרות</h3>
+                                <h3 class="text-xl md:text-2xl font-bold">רכבל ארגו וכיכרות</h3>
                                 <p class="text-sm opacity-90"><i class="fas fa-mountain mr-1"></i> נגיש ונופי</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Content Section -->
-                    <div class="md:w-3/5 p-8 flex flex-col justify-between">
+                    <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-3 mb-4 mt-8 md:mt-0">
+                            <div class="flex items-center gap-3 mb-4 mt-2 md:mt-0">
                                 <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">יום שני, 6 ביולי</span>
                                 <span class="text-gray-600 text-sm font-medium">באטומי מלמעלה ומלמטה</span>
                             </div>
                             
                             <p class="text-gray-600 mb-6 leading-relaxed">
-                                יום רגוע ונגיש: בבוקר נעלה ב<strong>רכבל ארגו</strong> לתצפית פנורמית מדהימה (ללא מאמץ). לאחר מכן נטייל בכיכר אירופה ופיאצה המרשימות. אחה"צ במופע הדולפינים.
+                                יום רגוע ונגיש: בבוקר נעלה ב<strong>רכבל ארגו</strong> לתצפית פנורמית מדהימה.
                             </p>
 
-                            <!-- Cable Car Buttons -->
-                            <div class="flex gap-3 mb-6">
-                                <a href="https://argo-cable-car.ge/" target="_blank" class="flex-1 bg-amber-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-amber-700 transition shadow">
+                            <!-- Cable Car Buttons - Stacked on Mobile -->
+                            <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                                <a href="https://argo-cable-car.ge/" target="_blank" class="w-full sm:w-auto flex-1 bg-amber-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-amber-700 transition shadow">
                                     <i class="fas fa-ticket-alt ml-2"></i>כרטיסים לרכבל
                                 </a>
-                                <a href="https://argo-cable-car.ge/" target="_blank" class="flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg font-bold text-sm hover:bg-gray-300 transition shadow">
+                                <a href="https://argo-cable-car.ge/" target="_blank" class="w-full sm:w-auto flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg font-bold text-sm hover:bg-gray-300 transition shadow">
                                     <i class="fas fa-info-circle ml-2"></i>מידע על הרכבל
                                 </a>
                             </div>
 
-                            <div class="flex gap-4 mb-6">
-                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex-1 text-center">
+                            <!-- Timeline Icons -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-center">
                                     <i class="fas fa-tram text-2xl text-amber-600 mb-2"></i>
                                     <div class="text-xs font-bold text-gray-600">רכבל ארגו</div>
                                     <div class="text-xs text-gray-400">10:00-12:00</div>
                                 </div>
-                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex-1 text-center">
-                                    <i class="fas fa-city text-2xl text-blue-400 mb-2"></i>
-                                    <div class="text-xs font-bold text-gray-600">כיכר אירופה</div>
+                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-center">
+                                    <i class="fas fa-utensils text-2xl text-blue-400 mb-2"></i>
+                                    <div class="text-xs font-bold text-gray-600">צהריים ב-Mendi's</div>
                                     <div class="text-xs text-gray-400">12:30-13:30</div>
                                 </div>
-                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex-1 text-center">
+                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-center">
                                     <i class="fas fa-fish text-2xl text-blue-600 mb-2"></i>
                                     <div class="text-xs font-bold text-gray-600">דולפינריום</div>
                                     <div class="text-xs text-gray-400">16:00</div>
@@ -323,13 +322,8 @@
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-green-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">12:30 צהריים</strong>
-                                    <span class="text-sm text-gray-600">ארוחה בפיאצה (קפה) או חזרה לאזור המלון/חב"ד.</span>
-                                </li>
-                                <li class="relative">
-                                    <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-green-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">13:30 מנוחת צהריים (שנ"צ)</strong>
-                                    <span class="text-sm text-gray-600">חובה למנוחה לקטנטנים ולמבוגרים.</span>
+                                    <strong class="block text-gray-800">12:30 צהריים: Mendi's (חב"ד)</strong>
+                                    <span class="text-sm text-gray-600">מסעדה בשרית כשרה. <strong class="text-red-500">חשוב:</strong> נסיעה קצרה במונית (לא הליכה).</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-green-500 border-2 border-white"></span>
@@ -339,11 +333,11 @@
                             </ul>
 
                              <!-- Dolphinarium Buttons -->
-                            <div class="flex gap-3 mb-6">
-                                <a href="http://dolphinarium.ge/en/" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition shadow">
+                            <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                                <a href="http://dolphinarium.ge/en/" target="_blank" class="w-full sm:w-auto flex-1 bg-blue-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition shadow">
                                     <i class="fas fa-ticket-alt ml-2"></i>כרטיסים לדולפינריום
                                 </a>
-                                <a href="http://dolphinarium.ge/en/" target="_blank" class="flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg font-bold text-sm hover:bg-gray-300 transition shadow">
+                                <a href="http://dolphinarium.ge/en/" target="_blank" class="w-full sm:w-auto flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg font-bold text-sm hover:bg-gray-300 transition shadow">
                                     <i class="fas fa-info-circle ml-2"></i>מידע על הדולפינריום
                                 </a>
                             </div>
@@ -351,17 +345,17 @@
                         </div>
 
                         <!-- Map Embed -->
-                        <div class="mt-4 grid grid-cols-2 gap-4">
-                            <div>
+                        <div class="mt-4 grid md:grid-cols-2 gap-4">
+                            <div class="mb-4 md:mb-0">
                                 <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">רכבל ארגו</h4>
                                 <div class="map-container h-32 rounded-xl overflow-hidden shadow-inner border border-gray-200">
                                     <iframe src="https://maps.google.com/maps?q=Argo+Cable+Car&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
                                 </div>
                             </div>
                             <div>
-                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">דולפינריום</h4>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">מסעדת מנדיס (חב"ד)</h4>
                                 <div class="map-container h-32 rounded-xl overflow-hidden shadow-inner border border-gray-200">
-                                    <iframe src="https://maps.google.com/maps?q=Batumi+Dolphinarium&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                                    <iframe src="https://maps.google.com/maps?q=Mendis+Restaurant+Batumi&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -371,75 +365,80 @@
 
             <!-- Day 3 -->
             <div class="card-hover bg-white/95 backdrop-blur rounded-2xl shadow-xl overflow-hidden relative z-10 border border-gray-100">
-                <div class="absolute top-0 right-0 bg-teal-600 text-white py-2 px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-lg">יום 3 | טבע</div>
+                <div class="absolute top-0 right-0 bg-teal-600 text-white py-1 px-4 md:py-2 md:px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-sm md:text-lg">יום 3 | כפר וטבע</div>
                 <div class="flex flex-col md:flex-row">
                     <!-- Image Section -->
                     <div class="md:w-2/5 relative overflow-hidden group">
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/17/94/e8/30-900.jpg?w=800&h=-1&s=1" alt="Makhuntseti Waterfall" class="card-image w-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div class="text-white">
-                                <h3 class="text-2xl font-bold">מפל מאכונצטי</h3>
-                                <p class="text-sm opacity-90"><i class="fas fa-water mr-1"></i> טבע עוצר נשימה</p>
+                                <h3 class="text-xl md:text-2xl font-bold">הכפר מירבטי והמפל</h3>
+                                <p class="text-sm opacity-90"><i class="fas fa-tree mr-1"></i> פולקלור אמיתי בטבע</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Content Section -->
-                    <div class="md:w-3/5 p-8 flex flex-col justify-between">
+                    <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-3 mb-4 mt-8 md:mt-0">
+                            <div class="flex items-center gap-3 mb-4 mt-2 md:mt-0">
                                 <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-bold">יום שלישי, 7 ביולי</span>
-                                <span class="text-gray-600 text-sm font-medium">הרים, כפרים ופיקניק</span>
+                                <span class="text-gray-600 text-sm font-medium">חיי כפר אותנטיים וטבע פראי</span>
                             </div>
                             
                             <div class="bg-amber-50 p-4 rounded-xl mb-6 border-l-4 border-amber-500 shadow-sm">
-                                <h4 class="font-bold text-amber-900 mb-1 flex items-center"><i class="fas fa-bread-slice ml-2"></i> פתרון הכשרות: פיקניק!</h4>
-                                <p class="text-sm text-gray-700">קונים בבוקר לוואשי (לחם), גבינות וירקות בבאטומי. משלימים עם פירות ודבש מהרוכלים בכפר.</p>
+                                <h4 class="font-bold text-amber-900 mb-1 flex items-center"><i class="fas fa-bread-slice ml-2"></i> פתרון כשרות (חובה):</h4>
+                                <p class="text-sm text-gray-700">אין מסעדות כשרות באזור. <strong>חובה להצטייד בבוקר</strong> בכריכים בשריים ארוזים מהמלון/חב"ד, או לקחת צידנית עם גבינות וירקות.</p>
                             </div>
 
                             <ul class="space-y-4 mb-6 relative border-r-2 border-gray-200 pr-4">
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-teal-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">10:00 מוזיאון בורג'גלו</strong>
-                                    <span class="text-sm text-gray-600">כפר אתנוגרפי פתוח עם נגישות טובה. מפגש עם אומן מקומי.</span>
+                                    <strong class="block text-gray-800">10:00 הכפר מירבטי (Mirveti)</strong>
+                                    <span class="text-sm text-gray-600">חוויה כפרית אמיתית: הליכה בין בתי כפר פתוחים, חציית גשר תלוי מעל הנהר, ומפגש עם חיות משק.</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-teal-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">12:30 מפל מאכונצטי וגשר תמר</strong>
-                                    <span class="text-sm text-gray-600">הליכה של 5 דקות מהחניה למפל על שביל סלול.</span>
+                                    <strong class="block text-gray-800">11:30 יער האשכרוע ומפל מירבטי</strong>
+                                    <span class="text-sm text-gray-600">הליכה קסומה וקלה בתוך יער מכושף עד למפל הנסתר.</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-teal-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">13:30 פיקניק בטבע</strong>
-                                    <span class="text-sm text-gray-600">על שפת הנהר. אופציה לרפטינג קצר לנוער (סירות גומי).</span>
+                                    <strong class="block text-gray-800">13:00 מפל מאכונצטי</strong>
+                                    <span class="text-sm text-gray-600">נסיעה קצרה למפל המפורסם ולגשר המלכה תמר העתיק.</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-teal-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">15:30 חזרה למלון</strong>
-                                    <span class="text-sm text-gray-600">חזרה מוקדמת לעיר למנוחה ארוכה וערב חופשי.</span>
+                                    <strong class="block text-gray-800">14:00 פיקניק בטבע</strong>
+                                    <span class="text-sm text-gray-600">זמן איכות על גדות הנהר עם האוכל שהבאתם.</span>
+                                </li>
+                                <li class="relative">
+                                    <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-teal-500 border-2 border-white"></span>
+                                    <strong class="block text-gray-800">16:30 חזרה לעיר</strong>
+                                    <span class="text-sm text-gray-600">חזרה נינוחה למלון. ערב חופשי.</span>
                                 </li>
                             </ul>
                             
-                            <div class="flex gap-3 mb-2">
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g2532450-d6966160-Reviews-Ethnographic_Museum_Borjgalo-Khelvachauri_Adjara_Region.html" target="_blank" class="flex-1 bg-teal-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-teal-700 transition shadow">
-                                    <i class="fas fa-external-link-alt ml-2"></i>למוזיאון בורג'גלו
+                            <div class="flex flex-col sm:flex-row gap-3 mb-2">
+                                <a href="https://georgia.travel/mirveti-waterfall" target="_blank" class="w-full sm:w-auto flex-1 bg-teal-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-teal-700 transition shadow">
+                                    <i class="fas fa-external-link-alt ml-2"></i>על הכפר מירבטי
                                 </a>
                             </div>
 
                         </div>
 
                         <!-- Map Embed -->
-                        <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div class="mt-4 grid md:grid-cols-2 gap-4">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">מירבטי (Mirveti)</h4>
+                                <div class="map-container h-32 rounded-xl overflow-hidden shadow-inner border border-gray-200">
+                                    <iframe src="https://maps.google.com/maps?q=Mirveti+Waterfall&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                                </div>
+                            </div>
                             <div>
                                 <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">מפל מאכונצטי</h4>
                                 <div class="map-container h-32 rounded-xl overflow-hidden shadow-inner border border-gray-200">
                                     <iframe src="https://maps.google.com/maps?q=Makhuntseti+Waterfall&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">גשר המלכה תמר</h4>
-                                <div class="map-container h-32 rounded-xl overflow-hidden shadow-inner border border-gray-200">
-                                    <iframe src="https://maps.google.com/maps?q=Queen+Tamar+Bridge+Makhuntseti&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -449,7 +448,7 @@
 
             <!-- Day 4 -->
             <div class="card-hover bg-white/95 backdrop-blur rounded-2xl shadow-xl overflow-hidden relative z-10 border border-gray-100">
-                <div class="absolute top-0 right-0 bg-purple-600 text-white py-2 px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-lg">יום 4 | הפלגה ופארק</div>
+                <div class="absolute top-0 right-0 bg-purple-600 text-white py-1 px-4 md:py-2 md:px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-sm md:text-lg">יום 4 | הפלגה ופארק</div>
                 <div class="flex flex-col md:flex-row">
                     <!-- Image Section with Slideshow -->
                     <div class="md:w-2/5 relative overflow-hidden group">
@@ -461,16 +460,16 @@
                         </div>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 pointer-events-none z-10">
                             <div class="text-white">
-                                <h3 class="text-2xl font-bold">הפלגה, חופים ופארק</h3>
+                                <h3 class="text-xl md:text-2xl font-bold">הפלגה, חופים ופארק</h3>
                                 <p class="text-sm opacity-90"><i class="fas fa-star mr-1"></i> יום של כיף אקטיבי</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Content Section -->
-                    <div class="md:w-3/5 p-8 flex flex-col justify-between">
+                    <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-3 mb-4 mt-8 md:mt-0">
+                            <div class="flex items-center gap-3 mb-4 mt-2 md:mt-0">
                                 <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-bold">יום רביעי, 8 ביולי</span>
                                 <span class="text-gray-600 text-sm font-medium">הפלגה, חופים ופארק שעשועים</span>
                             </div>
@@ -486,12 +485,12 @@
                                 </div>
                             </div>
 
-                            <!-- Buttons for Sailing & Park -->
-                            <div class="flex gap-3 mb-6">
-                                <a href="https://www.tripadvisor.com/Attractions-g294192-Activities-c61-t167-Batumi_Adjara_Region.html" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition shadow">
+                            <!-- Buttons for Sailing & Park - Stacked on Mobile -->
+                            <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                                <a href="https://www.tripadvisor.com/Attractions-g294192-Activities-c61-t167-Batumi_Adjara_Region.html" target="_blank" class="w-full sm:w-auto flex-1 bg-blue-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition shadow">
                                     <i class="fas fa-ship ml-2"></i>מידע על הפלגה
                                 </a>
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g2557675-d2324707-Reviews-Amusement_Park_Tsitsinatela-Shekvetili_Guria_Region.html" target="_blank" class="flex-1 bg-purple-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-purple-700 transition shadow">
+                                <a href="https://www.tripadvisor.com/Attraction_Review-g2557675-d2324707-Reviews-Amusement_Park_Tsitsinatela-Shekvetili_Guria_Region.html" target="_blank" class="w-full sm:w-auto flex-1 bg-purple-600 text-white text-center py-2 rounded-lg font-bold text-sm hover:bg-purple-700 transition shadow">
                                     <i class="fas fa-ticket-alt ml-2"></i>פארק ציצינאטלה
                                 </a>
                             </div>
@@ -500,17 +499,22 @@
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-indigo-500 border-2 border-white"></span>
                                     <strong class="block text-gray-800">09:30 שוק Boni (קצר)</strong>
-                                    <span class="text-sm text-gray-600">סיבוב קצר וקולע בשוק המזון.</span>
+                                    <span class="text-sm text-gray-600">סיבוב קצר בשוק. נשנוש בוקר: פירות ואגוזים.</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-indigo-500 border-2 border-white"></span>
                                     <strong class="block text-gray-800">11:00 חוף Iveria Beach</strong>
-                                    <span class="text-sm text-gray-600">זמן איכות בים בשעות הבוקר הנעימות.</span>
+                                    <span class="text-sm text-gray-600">זמן איכות בים.</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-indigo-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">14:00 הפלגה ביאכטה</strong>
-                                    <span class="text-sm text-gray-600">שייט פרטי של שעה-שעתיים. חזרה למנוחה במלון ב-16:00.</span>
+                                    <strong class="block text-gray-800">13:30 ארוחת צהריים בשרית</strong>
+                                    <span class="text-sm text-gray-600">חוזרים לאכול ב-**King Solomon** (קרוב לחוף/מלון).</span>
+                                </li>
+                                <li class="relative">
+                                    <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-indigo-500 border-2 border-white"></span>
+                                    <strong class="block text-gray-800">15:00 הפלגה ביאכטה</strong>
+                                    <span class="text-sm text-gray-600">שייט פרטי של שעה. חזרה למנוחה במלון ב-16:30.</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-purple-500 border-2 border-white"></span>
@@ -521,8 +525,8 @@
                         </div>
 
                         <!-- Map Embed -->
-                        <div class="mt-4 grid grid-cols-2 gap-4">
-                            <div>
+                        <div class="mt-4 grid md:grid-cols-2 gap-4">
+                            <div class="mb-4 md:mb-0">
                                 <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">חוף Iveria</h4>
                                 <div class="map-container h-32 rounded-xl overflow-hidden shadow-inner border border-gray-200 relative group">
                                     <iframe src="https://maps.google.com/maps?q=Iveria+Beach+Batumi&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
@@ -541,7 +545,7 @@
 
             <!-- Day 5 -->
             <div class="card-hover bg-white/95 backdrop-blur rounded-2xl shadow-xl overflow-hidden relative z-10 border border-gray-100">
-                <div class="absolute top-0 right-0 bg-gray-600 text-white py-2 px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-lg">יום 5 | פרידה</div>
+                <div class="absolute top-0 right-0 bg-gray-600 text-white py-1 px-4 md:py-2 md:px-6 rounded-bl-2xl font-bold shadow-lg z-20 text-sm md:text-lg">יום 5 | פרידה</div>
                 <div class="flex flex-col md:flex-row">
                     <!-- Image Section -->
                     <div class="md:w-2/5 relative overflow-hidden group">
@@ -549,16 +553,16 @@
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/7e/ce/b7/caption.jpg" alt="Ali and Nino Statue" class="card-image w-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                             <div class="text-white">
-                                <h3 class="text-2xl font-bold">פארק הניסים</h3>
+                                <h3 class="text-xl md:text-2xl font-bold">פארק הניסים</h3>
                                 <p class="text-sm opacity-90"><i class="fas fa-heart mr-1"></i> עלי ונינו והמגדלור</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Content Section -->
-                    <div class="md:w-3/5 p-8 flex flex-col justify-between">
+                    <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-3 mb-4 mt-8 md:mt-0">
+                            <div class="flex items-center gap-3 mb-4 mt-2 md:mt-0">
                                 <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs font-bold">יום חמישי, 9 ביולי</span>
                                 <span class="text-gray-600 text-sm font-medium">פרידה מהעיר וטיסה הביתה</span>
                             </div>
@@ -575,8 +579,8 @@
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-gray-500 border-2 border-white"></span>
-                                    <strong class="block text-gray-800">13:00 קניון Metro City</strong>
-                                    <span class="text-sm text-gray-600">ארוחת צהריים, שופינג ומזגן. צמוד לים וקרוב לשדה.</span>
+                                    <strong class="block text-gray-800">13:00 צהריים וקניות: Metro City</strong>
+                                    <span class="text-sm text-gray-600">ארוחת צהריים ב-**King Solomon** לפני היציאה, או קפה ומאפה בקניון.</span>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -right-[21px] top-1 h-3 w-3 rounded-full bg-gray-500 border-2 border-white"></span>
